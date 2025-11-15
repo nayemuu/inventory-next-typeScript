@@ -25,11 +25,11 @@ const InputWithLogoForPassword: FC<InputWithLogoForPasswordProps> = ({
         className="bg-transparent h-full w-full border border-solid border-primary focus:border-primary-deep rounded-[5px] outline-none pl-[53px] text-[16px]"
       />
 
-      <div className="h-full  top-0 right-0 absolute  flex items-center  px-[13px] imageContainerPadding">
+      <div className="h-full top-0 right-0 absolute flex items-center px-[13px]">
         <div onClick={() => setIsVisible(!isVisible)}>
           {isVisible ? (
             <svg
-              className="w-6 h-6 opacity-50"
+              className="w-6 h-6 opacity-50 cursor-pointer"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -50,7 +50,7 @@ const InputWithLogoForPassword: FC<InputWithLogoForPasswordProps> = ({
             </svg>
           ) : (
             <svg
-              className="w-6 h-6 opacity-50"
+              className="w-6 h-6 opacity-50 cursor-pointer"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
