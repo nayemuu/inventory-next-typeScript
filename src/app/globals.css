@@ -1,26 +1,58 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary-color: #43bfc7;
+  --primary-deep-color: #17939b;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/**
+ * @theme
+ * Defines or overrides Tailwind CSS design tokens.
+ * This block customizes breakpoints by first removing all default ones
+ * and then defining new custom breakpoints.
+ */
+@theme {
+  /**
+   * @description
+   * Removes all of Tailwind’s default breakpoints (sm, md, lg, xl, 2xl).
+   * This allows you to define your own custom breakpoints from scratch.
+   */
+  --breakpoint-*: initial;
+
+  /**
+   * @description
+   * Defines custom breakpoints for responsive utilities like sm:, md:, lg:, etc.
+   * These will now replace Tailwind’s default screen sizes.
+   */
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1400px;
+
+  /**
+   * @description
+   * Adds a custom extra-large breakpoint for very wide screens.
+   * @note
+   * You can freely define custom breakpoint names as long as they
+   * start with "--breakpoint-" and follow a valid CSS variable naming convention.
+   * Example usage: `big-screen:bg-blue-500`
+   */
+  --color-primary: var(--primary-color);
+  --color-primary-deep: var(--primary-deep-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/**
+ * @layer utilities
+ * Used to extend or add custom utility classes in Tailwind.
+ */
+@layer utilities {
+  /**
+   * @description
+   * Extends the default `.container` class to ensure it is always centered.
+   * The @apply directive allows you to reuse existing Tailwind utilities.
+   */
+  .container {
+    @apply mx-auto;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
