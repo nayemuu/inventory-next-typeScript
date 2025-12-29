@@ -22,7 +22,7 @@ const InputWithLogoForPassword: FC<InputWithLogoForPasswordProps> = ({
       <input
         {...props}
         type={isVisible ? "text" : "password"}
-        className="bg-transparent h-full w-full border border-solid border-primary focus:border-primary-deep rounded-[5px] outline-none pl-[53px] text-[16px]"
+        className="bg-transparent h-full w-full border border-solid border-stock focus:border-primary rounded-[5px] outline-none pl-[53px] text-[16px]"
       />
 
       <div className="h-full top-0 right-0 absolute flex items-center px-[13px]">
