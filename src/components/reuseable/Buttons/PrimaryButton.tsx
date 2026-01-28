@@ -13,10 +13,10 @@ const PrimaryButton: FC<PrimaryButtonPropsType> = ({
 }) => {
   return (
     <button
-      className={`px-6 py-2 min-h-[40px] flex justify-center items-center gap-2 border border-transparent text-[18px] leading-[20px] font-medium rounded-[5px] text-white hover:bg-primary-deep transition duration-150 ease-in-out ${
+      className={`px-6 py-2 min-h-[40px] flex justify-center items-center gap-2 border border-transparent text-[18px] leading-[20px] font-medium rounded-[5px] text-white hover:bg-primary-button-hover transition duration-150 ease-in-out ${
         isLoading || disabled
-          ? "bg-primary-deep cursor-not-allowed"
-          : `bg-primary cursor-pointer`
+          ? "bg-primary-button-hover cursor-not-allowed"
+          : `bg-primary-button cursor-pointer`
       }`}
       disabled={disabled || isLoading}
     >

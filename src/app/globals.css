@@ -3,6 +3,8 @@
 :root {
   --primary-color: #43bfc7;
   --primary-deep-color: #17939b;
+  --primary-button: #43bfc7;
+  --primary-button-hover: #17939b;
   --stock: #d4dfe2;
 }
 
@@ -41,6 +43,8 @@
    */
   --color-primary: var(--primary-color);
   --color-primary-deep: var(--primary-deep-color);
+  --color-primary-button: var(--primary-button);
+  --color-primary-button-hover: var(--primary-button-hover);
   --color-stock: var(--stock);
 }
 
