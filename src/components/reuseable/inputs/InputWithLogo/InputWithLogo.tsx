@@ -15,7 +15,7 @@ const InputWithLogo: FC<InputWithLogoProps> = ({ logo, label, ...props }) => {
 
       <input
         {...props}
-        className="bg-transparent h-full w-full border border-solid border-stock focus:border-primary rounded-[5px] outline-none pl-[53px] text-[16px]"
+        className="bg-transparent h-full w-full border border-solid border-border focus:border-primary rounded-[5px] outline-none pl-[53px] text-[16px]"
       />
     </div>
   );
